@@ -1,0 +1,26 @@
+<div class="body">
+
+    <main class="form-signin">
+        <form>
+            <h1 class="h3 mb-3 fw-normal">Please sing up</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Name"
+                    [(ngModel)]="usuario.nombre" name="nombre">
+                <label for="floatingInput">Name</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                    [(ngModel)]="usuario.clave" name="clave">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingConfirm" placeholder="Confirm"
+                    [(ngModel)]="copiaClave" name="copiaClave">
+                <label for="floatingPassword">Confirm password</label>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="registrar()">Sing up</button>
+        </form>
+    </main>
+</div>
