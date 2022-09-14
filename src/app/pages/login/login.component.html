@@ -1,17 +1,18 @@
 <div class="body">
     <main class="form-signin">
-        <form>
+        <form [formGroup]="formLogin">
             <h1 class="h3 mb-3 fw-normal">Login</h1>
 
             <div class="form-floating">
-                <input type="name" class="form-control" id="floatingInput" placeholder="Name"
-                    [(ngModel)]="nuevoUsuario.nombre" name="nombre">
-                <label for="floatingInput">Name</label>
+                <!-- [(ngModel)]="nuevoUsuario.nombre" lo cambio por  -->
+                <input type="name" class="form-control" id="floatingInput" placeholder="Correo electronico"
+                    formControlName="email" name="nombre">
+                <label for="floatingInput">Correo electronico</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-                    [(ngModel)]="nuevoUsuario.clave" name="clave">
-                <label for="floatingPassword">Password</label>
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" name="clave"
+                    formControlName="password">
+                <label for="floatingPassword">Contraseña</label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="ingresar()">Sign in</button>
         </form>

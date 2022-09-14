@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
   {
@@ -17,7 +18,12 @@ const routes: Routes = [
     path: "quienSoy", component: QuienSoyComponent
   },
   {
-    path: "", component: HomeComponent
+    path: "", component: LoginComponent
+  },
+  {
+    path: "home",
+    component: HomeComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/registro']))
   }
 ];
 

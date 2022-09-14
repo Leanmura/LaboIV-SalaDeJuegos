@@ -1,23 +1,25 @@
 <div class="body">
 
     <main class="form-signin">
-        <form>
+        <!-- agrego propiedad -->
+        <form [formGroup]="formReg">
             <h1 class="h3 mb-3 fw-normal">Please sing up</h1>
 
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Name"
-                    [(ngModel)]="usuario.nombre" name="nombre">
-                <label for="floatingInput">Name</label>
+                <!-- cambio [(ngModel)]="usuario.nombre"  por formControlName= -->
+                <input type="text" class="form-control" id="floatingInput" placeholder="Correo electronico" name="email"
+                    formControlName="email">
+                <label for="floatingInput">Correo electronico</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-                    [(ngModel)]="usuario.clave" name="clave">
-                <label for="floatingPassword">Password</label>
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña"
+                    formControlName="password" name="clave">
+                <label for="floatingPassword">Contraseña</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingConfirm" placeholder="Confirm"
-                    [(ngModel)]="copiaClave" name="copiaClave">
-                <label for="floatingPassword">Confirm password</label>
+                <input type="password" class="form-control" id="floatingConfirm" placeholder="Confirmar Contraseña"
+                    formControlName="copyPassword" name="copiaClave">
+                <label for="floatingPassword">Confirmar contraseña</label>
             </div>
 
             <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="registrar()">Sing up</button>
