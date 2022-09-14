@@ -1,3 +1,31 @@
-<h1 class="margin">Quien Soy?</h1>
-<img src="{{urlFoto}}" alt="{{login}}">
-<h3>{{name}}</h3>
+<div class="container-sm margin">
+    <div class="card center w-50 offset-3">
+        <div class="card-header bg-dark text-white">
+            <h3>Quien Soy?</h3>
+        </div>
+        <div class="card-body row">
+            <h4 class="card-title"><b>{{name}}</b></h4>
+            <div class="col">
+                <img class="rounded-circle border border-secondary border-5 img-fluid" src="{{urlFoto}}"
+                    alt="{{login}}">
+            </div>
+            <div class="card-text col-1">
+            </div>
+            <div class="card-text col-7">
+
+                <br>
+
+                <p class="h6"><b> User: </b>{{login}}</p>
+                <p class="h6"><b>Ingrese el: </b>{{created_at}}</p>
+                <p class="h6"><b>Pais: </b>{{pais}}</p>
+                <p class="h6"><b>Provincia:</b> {{provincia}}</p>
+                <p class="h6"><b>Ciudad: </b>{{ciudad}}</p>
+                <p class="h6"><b>Repositorio:</b> {{public_repos}}</p>
+
+            </div>
+        </div>
+        <div class="card-footer bg-dark">
+
+        </div>
+    </div>
+</div>
