@@ -72,6 +72,7 @@ export class LoginComponent implements OnInit {
       })
       .catch(error => console.error(error));
   }
+
   dameUsuarios() {
     // let listadoGuardado;
     // listadoGuardado = localStorage.getItem("listadoDeUsuarios");
@@ -79,5 +80,13 @@ export class LoginComponent implements OnInit {
     //   listadoGuardado = JSON.parse(listadoGuardado);
     // }
     // return listadoGuardado;
+  }
+
+  autoCompletar(email: string, password: string) {
+    this.formLogin.setValue({
+      email: email,
+      password: password
+    });
+
   }
 }

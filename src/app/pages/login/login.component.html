@@ -15,6 +15,18 @@
                 <label for="floatingPassword">Contraseña</label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="ingresar()">Sign in</button>
+
         </form>
+        <div class="d-flex justify-content">
+            <input type="image" src="../../../assets/icon/girl (1).png"
+                class="w-25 btn btn-xs rounded-circle img-btn flex-fill"
+                (click)="autoCompletar('murakoshi.lean@gmail.com','123456' )" />
+            <input type="image" src="../../../assets/icon/man.png"
+                class="w-25 btn btn-lg rounded-circle img-btn flex-fill"
+                (click)="autoCompletar('martinezequielsoria@gmail.com','asdasd' )" />
+            <input type="image" src="../../../assets/icon/girl.png"
+                class="w-25 btn btn-lg rounded-circle img-btn flex-fill"
+                (click)="autoCompletar('erina_kimi@yahoo.com.ar','erinaa' )" />
+        </div>
     </main>
 </div>
